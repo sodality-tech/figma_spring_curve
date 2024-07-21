@@ -12,6 +12,10 @@ and the Flutter guide for
 -->
 # Figma Spring Curve
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE-MIT)
+[![pub package](https://img.shields.io/pub/v/figma_spring_curve.svg)](https://pub.dev/packages/figma_spring_curve)
+
+
 Dart implementation of figma's spring curves, and a collection of their built in spring curves.
 
 Based on Figma's [blog post about spring animations](https://www.figma.com/blog/how-we-built-spring-animations/) 
