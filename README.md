@@ -10,30 +10,32 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
+# Figma Spring Curve
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Dart implementation of figma's spring curves, and a collection of their built in spring curves.
+
+Based on Figma's [blog post about spring animations](https://www.figma.com/blog/how-we-built-spring-animations/) 
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- FigmaSpringCurve class that allows you to define a spring curve using stiffness, damping and mass
+- 4 Predefined curves that are built-in on figma
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Run `flutter pub add figma_spring_curve`
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+final curve = FigmaSpringCurve(300, 20, 1);
+final bouncyCurve = FigmaSpringCurve.bouncy;
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+
+
+- This packaged was developed in house by the developers of [Ping](https://www.getping.co/) 
+- Feel free to file issues on Github!
+
