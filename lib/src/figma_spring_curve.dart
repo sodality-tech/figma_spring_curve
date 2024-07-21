@@ -11,9 +11,9 @@ class FigmaSpringCurve extends Curve {
   late final double _mB;
 
   FigmaSpringCurve(
-    double mass,
     double stiffness,
-    double damping, [
+    double damping,
+    double mass, [
     double initialVelocity = 0.5,
   ]) {
     _mW0 = math.sqrt(stiffness / mass);
@@ -46,14 +46,24 @@ class FigmaSpringCurve extends Curve {
     return 1 - t;
   }
 
-  static FigmaSpringCurve bounce = _FigmaBounceCurve();
-  static FigmaSpringCurve gentle = _FigmaGentleCurve();
+  static FigmaSpringCurve gentle = _FigmaGentleSpringCurve();
+  static FigmaSpringCurve quick = _FigmaQuickSpringCurve();
+  static FigmaSpringCurve bouncy = _FigmaBouncySpringCurve();
+  static FigmaSpringCurve slow = _FigmaSlowSpringCurve();
 }
 
-class _FigmaBounceCurve extends FigmaSpringCurve {
-  _FigmaBounceCurve() : super(1, 600, 15);
+class _FigmaGentleSpringCurve extends FigmaSpringCurve {
+  _FigmaGentleSpringCurve() : super(100, 15, 1);
 }
 
-class _FigmaGentleCurve extends FigmaSpringCurve {
-  _FigmaGentleCurve() : super(1, 100, 15);
+class _FigmaQuickSpringCurve extends FigmaSpringCurve {
+  _FigmaQuickSpringCurve() : super(300, 20, 1);
+}
+
+class _FigmaBouncySpringCurve extends FigmaSpringCurve {
+  _FigmaBouncySpringCurve() : super(600, 15, 1);
+}
+
+class _FigmaSlowSpringCurve extends FigmaSpringCurve {
+  _FigmaSlowSpringCurve() : super(80, 20, 1);
 }
