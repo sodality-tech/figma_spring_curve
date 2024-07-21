@@ -1,6 +1,6 @@
 name: figma_spring_curve
 description: "Dart implementation of figma's spring curves. Also includes 4 prebuilt spring curves"
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/sodality-tech/figma_spring_curve
 issue_tracker: https://github.com/sodality-tech/figma_spring_curve/issues
 
