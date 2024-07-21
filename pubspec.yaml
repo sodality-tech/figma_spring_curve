@@ -1,7 +1,6 @@
 name: figma_spring_curve
-description: "A new Flutter package project."
+description: "Dart implementation of figma's spring curves"
 version: 0.0.1
-homepage:
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
