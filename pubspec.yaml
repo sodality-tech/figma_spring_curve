@@ -1,6 +1,6 @@
 name: figma_spring_curve
 description: "Dart implementation of figma's spring curves"
-version: 0.0.1
+version: 1.0.0
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
