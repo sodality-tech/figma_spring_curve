@@ -3,6 +3,8 @@ import 'dart:math' as math;
 import 'package:flutter/animation.dart';
 
 // Based on https://www.figma.com/blog/how-we-built-spring-animations/
+/// A Custom implementation of [Curve] that implements spring curve
+/// commonly used in Figma
 class FigmaSpringCurve extends Curve {
   late final double _mW0;
   late final double _mZeta;
@@ -10,6 +12,7 @@ class FigmaSpringCurve extends Curve {
   late final double _mA;
   late final double _mB;
 
+  /// Creates a [FigmaSpringCurve] curve
   FigmaSpringCurve(
     double stiffness,
     double damping,
@@ -46,9 +49,16 @@ class FigmaSpringCurve extends Curve {
     return 1 - t;
   }
 
+  /// Gentle spring curve
   static FigmaSpringCurve gentle = _FigmaGentleSpringCurve();
+
+  /// Quick spring curve
   static FigmaSpringCurve quick = _FigmaQuickSpringCurve();
+
+  /// Bouncy spring curve
   static FigmaSpringCurve bouncy = _FigmaBouncySpringCurve();
+
+  /// Slow spring curve
   static FigmaSpringCurve slow = _FigmaSlowSpringCurve();
 }
 
